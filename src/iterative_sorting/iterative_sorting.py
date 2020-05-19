@@ -32,20 +32,25 @@ def selection_sort(arr):
 def bubble_sort(arr):
     # Your code here
     has_swapped = True
-
+    count =0
+    
     while(has_swapped):
 
         has_swapped = False
 
         for i in range(len(arr) - 1):
-
+            
             if arr[i] > arr[i+1]:
+                count += 1
                 temp = arr[i]
                 arr[i] = arr[i+1]
                 arr[i+1] = temp
                 has_swapped=True
 
-    return arr
+    print(f"Array is sorted in {count} swaps.")
+    print(f"First Elemenet: {arr[0]}")
+    print(f"Last Element: {arr[len(arr)-1]}")
+    return
 
 
 # STRETCH: implement the Count Sort function below
@@ -54,3 +59,7 @@ def count_sort(arr, maximum=-1):
 
 
     return arr
+
+
+ppp= [8,7,8,6,99,100,1,3,5,85]
+print(bubble_sort(ppp))
